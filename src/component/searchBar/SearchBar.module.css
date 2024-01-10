@@ -1,0 +1,29 @@
+.search{
+    background: #f5d3a7;
+    border-radius: 40px;
+    padding: 5px 8px 5px 10px;
+    align-items: center;
+    display: flex;
+    width: 25%;
+    margin-left: auto;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.searchTxt{
+    width: 100%;
+    border: none !important;
+    background: none;
+    outline: none;
+    transition: ease-in 0.4s;
+}
+/* .search:hover > .searchBtn{
+    background: black ;
+    color: #f08804;
+ } */
+.searchBtn{
+    color: #f08804;
+    border-radius: 50%;
+    transition: ease-in 0.4s;
+    background:black ;
+}
+
