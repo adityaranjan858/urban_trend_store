@@ -2,11 +2,10 @@ import Button from '../button/Button';
 import style from "./Cards.module.css"
 
 function Cards({ productsList, buttonName, handleCard, show }) {
-  console.log(productsList)
 
   return (
     show ?
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
         {productsList.length > 0 && productsList.map(item => (
           <div className="col" key={item.id}>
             <div className="card h-100">

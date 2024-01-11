@@ -37,7 +37,7 @@ a {
   border-bottom: 3px solid transparent;
 }
 a:hover {
-  color: white !important;
+  color: #f08804 !important;
   border-bottom: 3px solid #f08804;
   border-radius: 5px;
   padding: 5px 10px !important;

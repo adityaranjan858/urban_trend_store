@@ -8,10 +8,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store/store.jsx';
 
+// basename="urban_trend_store"
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="urban_trend_store" >
+      <BrowserRouter basename="urban_trend_store">
         <App />
       </BrowserRouter>
     </Provider>

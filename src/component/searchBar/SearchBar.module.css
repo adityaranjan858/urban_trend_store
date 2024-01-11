@@ -27,3 +27,8 @@
     background:black ;
 }
 
+@media (max-width: 767.98px) { 
+    .search{
+        width: 100%;
+    }
+ }

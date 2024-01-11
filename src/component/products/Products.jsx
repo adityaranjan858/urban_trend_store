@@ -3,6 +3,9 @@ import Cards from "../cards/Cards";
 import { useEffect } from "react";
 import { fetchProducts } from "../../store/productSlice";
 import { add } from "../../store/cartSlice";
+import Loader from "../loader/Loader";
+import loaderGif from "../../media/ZNeT.gif"
+
 
 const Products = () => {
   const products = useSelector((state) => state.product);
@@ -28,9 +31,14 @@ const Products = () => {
   return (
     <>
       {products.isloading ? (
-        <h3 className="text-warning text-center">Loading...</h3>
+        <h3><Loader gif={loaderGif}/> </h3>
       ) : products.error ? (
-        <h3 className="text-danger text-center">Something went wrong...</h3>
+        <>
+        <div className="text-center position-absolute top-50 start-50 translate-middle">
+        <h3 className="text-danger">Oops! Something went wrong</h3> 
+        <small>We couldn&rsquo;t find the page you were looking for.</small>
+        </div>
+        </>
       ) : (
         <Cards
           productsList={findData}

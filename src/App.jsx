@@ -4,6 +4,7 @@ import NavbarHeading from "./component/navbar/NavbarHeading"
 import { Container } from "react-bootstrap"
 import Home from './pages/home/Home';
 import SearchBar from "./component/searchBar/SearchBar";
+import PageNotFound from "./pages/page_not_found/PageNotFound";
 
 function App() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="*" element={<PageNotFound/>} />
         </Routes>
       </Container>
     </>

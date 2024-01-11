@@ -19,7 +19,7 @@ const SearchBar = () => {
         <>
         <form>
             <div className={style.search}>
-                <input className={style.searchTxt} value={search} onChange={searchHandler} type="text" name="search" placeholder="Type to search"/>
+                <input className={style.searchTxt} value={search} autoComplete="off" onChange={searchHandler} type="text" name="search" placeholder="Type to search"/>
                     <Button className={style.searchBtn} >
                         <i className="fas fa-search"></i>
                     </Button>

@@ -9,7 +9,7 @@
 }
 
 .buttonDesign:hover{
-    color: black !important;
+    color: #f08804 !important;
     border: 1px solid transparent;
     background-color: white;
     border-color: #f08804;
