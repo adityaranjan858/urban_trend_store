@@ -1,0 +1,15 @@
+.container{
+    position: fixed;
+    top: 63px;
+    z-index: 99999;
+    right: 0%;
+    padding-left: 50px;
+    padding-right: 100px;
+    text-align: center;
+}
+
+@media (max-width: 575.98px) { 
+    .container{
+        width: 100%;
+    }
+ }
