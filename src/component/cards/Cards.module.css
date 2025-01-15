@@ -1,11 +1,15 @@
-.image {
+.product_image {
     width: 100%;
     height: 200px;
+    object-fit: contain;
+}
+.cart_image {
+    width: 100%;
+    height: 140px;
     object-fit: contain;
 }
 
 .cardBody{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }

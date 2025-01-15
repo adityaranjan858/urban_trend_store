@@ -22,7 +22,7 @@ function NavbarHeading() {
               Cart
               <i className="position-relative fa-solid fa-2x fa-cart-shopping">
                 <span className={`position-absolute top-0 start-100 translate-middle badge rounded-pill ${style.cartIcon}`}>
-                  {cartProduct.length}
+                  {cartProduct.totalCartitem}
                 </span>
               </i>
             </Link>

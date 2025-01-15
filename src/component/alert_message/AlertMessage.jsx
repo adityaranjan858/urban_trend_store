@@ -9,7 +9,7 @@ const AlertMessage = ({ alert }) => {
         if(alert.content !== ""){
             let timer = setTimeout(()=>{
                 dispatch(alertMessage({content : "", type : ""}))
-            },2000); 
+            },1500); 
                 return ()=>{
                     clearTimeout(timer) 
                 }
