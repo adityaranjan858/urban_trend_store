@@ -13,7 +13,7 @@ import { store } from './store/store.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="urban_trend_store">
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </Provider>

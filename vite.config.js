@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base : "/urban_trend_store",
+  // base : "/urban_trend_store",
   plugins: [react()],
 })
 
