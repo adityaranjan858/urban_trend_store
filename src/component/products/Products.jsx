@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import Cards from "../cards/Cards";
 import { useEffect } from "react";
 import { fetchProducts } from "../../store/productSlice";
 import { add } from "../../store/cartSlice";
@@ -7,6 +6,8 @@ import Loader from "../loader/Loader";
 import loaderGif from "../../media/ZNeT.gif"
 import AlertMessage from "../alert_message/AlertMessage";
 import { alertMessage } from "../../store/generalSlice";
+import ProductsCard from "../cards/ProductsCard";
+import SearchBar from "../searchBar/SearchBar";
 
 
 const Products = () => {
@@ -48,12 +49,14 @@ const Products = () => {
           </div>
         </>
       ) : (
-        <Cards
+        <>
+        <SearchBar/>
+        <ProductsCard
           productsList={findData}
-          show="true"
           buttonName="Add to cart"
           handleCard={handleProduct}
         />
+        </>
       )}
     </>
   );

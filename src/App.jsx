@@ -1,27 +1,17 @@
-import { Route, Routes, useLocation } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import Cart from "./pages/Cart"
 import NavbarHeading from "./component/navbar/NavbarHeading"
 import { Container } from "react-bootstrap"
 import Home from './pages/home/Home';
-import SearchBar from "./component/searchBar/SearchBar";
 import PageNotFound from "./pages/page_not_found/PageNotFound";
+import Title from "./component/Title";
 
 function App() {
-  const location = useLocation();
-  const pathName = location.pathname.substring(1);
-
-  const title = (name) => {
-    const word = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-    return word;
-  }
-
+  
   return (
     <>
       <NavbarHeading />
-      <div className="container-fluid">
-        {pathName ? "" : <SearchBar/>}
-        {pathName ? <h5 className="mt-3"> {title(pathName)} </h5> : <h5 className="mt-3">Products</h5>}
-      </div>
+      <Title/>
       <Container fluid>
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,18 +1,20 @@
 .buttonDesign{
-    font-weight: 500;
-    color: black;
-    background-color: #f08804;
-    text-decoration: inherit;
-    border-radius: 20px;
-    padding: 5px 10px !important;
-    border: 1px solid transparent;
-}
-
-.buttonDesign:hover{
-    color: #f08804 !important;
     border: 1px solid transparent;
     background-color: white;
     border-color: #f08804;
     border-radius: 20px;
-    padding: 5px 10px !important;
+    padding: 5px 10px;
+}
+
+.buttonDesign:hover{
+    color: black;
+    font-weight: 500;
+    background-color: #f08804;
+    text-decoration: inherit;
+    border-radius: 20px;
+    padding: 5px 10px ;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease;
+
+
 }

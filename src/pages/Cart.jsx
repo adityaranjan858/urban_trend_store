@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import Cards from "../component/cards/Cards";
 import { remove, subTotalPrice } from "../store/cartSlice";
 import AlertMessage from "../component/alert_message/AlertMessage";
 import { alertMessage } from "../store/generalSlice";
 import Button from "../component/button/Button";
 import { useEffect } from "react";
+import CartCards from "../component/cards/CartCards";
 
 const Cart = () => {
   const cartdata = useSelector(state => state.cart)
@@ -34,11 +34,11 @@ const Cart = () => {
                 <div className="row">
                   <div className="col-4"></div>
                   <div className="col-4"></div>
-                  <div className="col-4"><h6 className="ms-5 d-none d-md-block text-secondary mb-0">Price</h6></div>
+                  <div className="col-4"><h6 className=" d-none d-md-block text-end me-3 text-secondary mb-0">Price</h6></div>
                 </div>
               </div>
               <hr className="mt-0" />
-              <Cards productsList={cartdata.cartItem} buttonName="Delete" handleCard={handleCart} />
+              <CartCards productsList={cartdata.cartItem} buttonName="Delete" handleCard={handleCart} />
               <p className="fw-medium text-end">Subtotal ({cartdata.cartItem.length} items): <b>{cartdata.subTotal}</b></p>
             </div>
           </div>
