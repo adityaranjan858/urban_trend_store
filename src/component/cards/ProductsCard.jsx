@@ -3,6 +3,7 @@ import style from "./Cards.module.css";
 import StarRating from "../star rating/StarRating";
 
 function ProductsCard({ productsList, buttonName, handleCard }) {
+  const conversionRate = 87.22;
 
   return (
     <div className="container">
@@ -36,7 +37,7 @@ function ProductsCard({ productsList, buttonName, handleCard }) {
                       <sup>&#8377;</sup>  
                       </div>
                       <div className=" lh-1">
-                        {Math.round(item.price * 87.22)}<small>.00</small></div>
+                        {Math.round(item.price * conversionRate)}<small>.00</small></div>
                      
                     </div> </div>
                   <Button

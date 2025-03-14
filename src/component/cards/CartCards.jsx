@@ -6,7 +6,8 @@ import { decrementQuantity, incrementQuantity } from "../../store/cartSlice";
 
 function CartCards({ productsList, buttonName, handleCard }) {
   const dispatch = useDispatch();
-
+  const conversionRate = 87.22;
+  console.log(productsList);
   const qtyIncrement = (id) => {
     dispatch(incrementQuantity(id));
   };
@@ -73,7 +74,7 @@ function CartCards({ productsList, buttonName, handleCard }) {
                                           <sup>&#8377;</sup>  
                                           </div>
                                           <div className=" lh-1">
-                                            {Math.round(item.price * 87.22)}<small>.00</small></div>
+                                            {Math.round(item.price * conversionRate)}<small>.00</small></div>
                                          
                                         </div> </div>
                     <Button
