@@ -25,8 +25,11 @@ const Products = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchProducts());
-  }, []);
+    if (products.searchedProducts.length === 0) {
+      dispatch(fetchProducts());
+    }
+  }, [products.searchedProducts, dispatch]);
+  
 
   const findData = products.data.filter(item => {
     if (products.searchedProducts && products.searchedProducts.length === 0) {

@@ -1,7 +1,7 @@
 import Button from "../button/Button";
 import style from "./Cards.module.css";
 import StarRating from "../star rating/StarRating";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 function ProductsCard({ productsList, buttonName, handleCard }) {
   const conversionRate = 87.22;
@@ -54,7 +54,7 @@ function ProductsCard({ productsList, buttonName, handleCard }) {
           )) 
           : <div className="text-center w-100 ">
             <h1 className=" mt-5 text-danger">No Products Found</h1>
-            <Button className="mt-3" onClick={() => navigate("/") }>Go Home</Button>
+            <Button className="mt-5" onClick={() => {navigate("/"); window.location.reload();} }>Go Home</Button>
           </div> 
           }
       </div>

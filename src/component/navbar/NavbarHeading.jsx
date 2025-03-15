@@ -1,13 +1,13 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import style from "./NavbarHeading.module.css"
 import { useSelector } from 'react-redux';
 
 function NavbarHeading() {
   const cartProduct = useSelector(state => state.cart)
-
+  
   return (
     <Navbar collapseOnSelect expand="lg" sticky="top" className={style.navbar}>
       <Container fluid>
