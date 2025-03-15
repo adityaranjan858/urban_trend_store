@@ -161,3 +161,65 @@ border-bottom: 1px solid #e7e7e7;
     margin: 20px 0;
     border-color: #ecf0f1;
   }
+
+
+  /* Shimmer card effects  */
+  @keyframes shimmer {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: 200px 0;
+    }
+  }
+  
+  .shimmer {
+    background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+    background-size: 400px 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 5px;
+    display: block;
+  }
+  
+  .shimmerCard {
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imageContainer {
+    height: 200px;
+    width: 100%;
+  }
+  
+  .shimmerText {
+    height: 16px;
+    width: 80%;
+    margin-bottom: 8px;
+  }
+  
+  .shimmerRating {
+    height: 14px;
+    width: 50%;
+    margin-bottom: 8px;
+  }
+  
+  .shimmerCount {
+    height: 12px;
+    width: 60%;
+    margin-bottom: 8px;
+  }
+  
+  .shimmerPrice {
+    height: 20px;
+    width: 40%;
+    margin-bottom: 12px;
+  }
+  
+  .shimmerButton {
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  

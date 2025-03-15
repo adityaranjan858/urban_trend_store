@@ -86,8 +86,14 @@ const cartSlice = createSlice({
       );
       state.subTotal = Math.round(subtotal).toFixed(2);
     },
+
+    clearCart(state){
+      state.cartItem = [];
+      state.totalCartitem = 0;
+      state.subTotal = 0
+    }
   }
 });
 
-export const { add, remove, incrementQuantity, decrementQuantity, subTotalPrice } = cartSlice.actions;
+export const { add, remove, incrementQuantity, decrementQuantity, subTotalPrice, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;

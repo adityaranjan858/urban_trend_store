@@ -13,7 +13,7 @@ const SearchBar = () => {
    
     useEffect(() => {
         dispatch(searchData(search)) 
-    }, [search]);
+    }, [dispatch, search]);
 
     return (
         <>

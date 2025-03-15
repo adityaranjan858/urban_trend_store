@@ -1,7 +1,7 @@
 import style from "./Button.module.css"
-const Button = ({children, onClick, className, bgColor, textColor, href}) => {
+const Button = ({children, onClick, className, bgColor, textColor, href, disabled}) => {
   return (
-    <button onClick={onClick} href={href} className={`${className} ${style.buttonDesign} bg-${bgColor} text-${textColor}`} >{children}</button>
+    <button onClick={onClick} href={href} disabled={disabled} className={`${className} ${style.buttonDesign} cursor-pointer bg-${bgColor} text-${textColor}`} >{children}</button>
   )
 }
 

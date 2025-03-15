@@ -8,6 +8,7 @@ import AlertMessage from "../alert_message/AlertMessage";
 import { alertMessage } from "../../store/generalSlice";
 import ProductsCard from "../cards/ProductsCard";
 import SearchBar from "../searchBar/SearchBar";
+import ShimmerProductsCard from "../cards/ShimmerProductsCard";
 
 
 const Products = () => {
@@ -32,7 +33,10 @@ const Products = () => {
       return item;
     } else {
       const regex = new RegExp(products.searchedProducts, "i");
-      return item.title.match(regex) || item.description.match(regex) || item.category.match(regex);
+      const result = item.title.match(regex) || item.description.match(regex) || item.category.match(regex)
+      return(
+        result
+      );
     }
   })
 
@@ -40,7 +44,7 @@ const Products = () => {
     <>
       <AlertMessage alert={generalData.message}/>
       {products.isloading ? (
-        <h3><Loader gif={loaderGif} /> </h3>
+        <ShimmerProductsCard/>
       ) : products.error ? (
         <>
           <div className="text-center position-absolute top-50 start-50 translate-middle">
@@ -50,7 +54,7 @@ const Products = () => {
         </>
       ) : (
         <>
-        <SearchBar/>
+        <SearchBar/> 
         <ProductsCard
           productsList={findData}
           buttonName="Add to cart"

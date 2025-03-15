@@ -1,0 +1,12 @@
+@media screen and (min-width: 991px) {    
+    .home_container {
+        min-height: calc(-62px + 100vh);
+    }
+}
+
+@media screen and (max-width: 991px) {    
+    .home_container {
+        min-height: calc(-56px + 100vh);
+    }
+}
+

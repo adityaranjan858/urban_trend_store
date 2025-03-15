@@ -1,15 +1,17 @@
 import Button from "../button/Button";
 import style from "./Cards.module.css";
 import StarRating from "../star rating/StarRating";
+import { useNavigate } from "react-router-dom";
 
 function ProductsCard({ productsList, buttonName, handleCard }) {
   const conversionRate = 87.22;
+  const navigate = useNavigate()
 
   return (
     <div className="container">
       <h5 className="mt-3">Products</h5>
       <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-        {productsList.length > 0 &&
+        {productsList.length > 0 ?
           productsList.map((item) => (
             <div className="col" key={item.id}>
               <div className={`card h-100 ${style.productCard}`}>
@@ -49,7 +51,12 @@ function ProductsCard({ productsList, buttonName, handleCard }) {
                 </div>
               </div>
             </div>
-          ))}
+          )) 
+          : <div className="text-center w-100 ">
+            <h1 className=" mt-5 text-danger">No Products Found</h1>
+            <Button className="mt-3" onClick={() => navigate("/") }>Go Home</Button>
+          </div> 
+          }
       </div>
     </div>
   )
