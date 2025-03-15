@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router';
 import style from "./NavbarHeading.module.css"
 import { useSelector } from 'react-redux';
-
+import logo from "/logo.png";
 function NavbarHeading() {
   const cartProduct = useSelector(state => state.cart)
   
@@ -12,7 +12,7 @@ function NavbarHeading() {
     <Navbar collapseOnSelect expand="lg" sticky="top" className={style.navbar}>
       <Container fluid>
         <Navbar.Brand>
-          <Link to="/" className='logo'>URBAN TREND</Link>
+          <Link to="/" className={`logo ${style.logo}`}><img className="" src={logo} alt="logo" /></Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className='bg-white' />
         <Navbar.Collapse id="responsive-navbar-nav">

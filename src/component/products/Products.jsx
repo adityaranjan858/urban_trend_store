@@ -2,8 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchProducts } from "../../store/productSlice";
 import { add } from "../../store/cartSlice";
-import Loader from "../loader/Loader";
-import loaderGif from "../../media/ZNeT.gif"
 import AlertMessage from "../alert_message/AlertMessage";
 import { alertMessage } from "../../store/generalSlice";
 import ProductsCard from "../cards/ProductsCard";
