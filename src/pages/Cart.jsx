@@ -43,7 +43,7 @@ const Cart = () => {
       <AlertMessage alert={generalData.message} />
       <Container fluid>
       <div className="row">
-        <div className="col-9">
+        <div className="col-12 col-sm-9 order-2 order-sm-1">
           <div className="bg-white p-3">
             <div className="container">
               <div className="row">
@@ -68,7 +68,7 @@ const Cart = () => {
             </p>
           </div>
         </div>
-        <div className="col-3">
+        <div className="col-12 col-sm-3 order-1 order-sm-2">
           <div className="bg-white p-3">
             <p className="fw-medium">
               Subtotal ({cartdata.cartItem.length} items):{" "}

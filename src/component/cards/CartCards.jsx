@@ -70,10 +70,10 @@ function CartCards({ productsList, buttonName, handleCard }) {
                   <div className={`col-md-3 ${style.cartItemActions}`}>
                      <div className={style.cartItemPrice}>
                                         <div className="d-flex ">
-                                          <div>
+                                          <div className="mt-1">
                                           <sup>&#8377;</sup>  
                                           </div>
-                                          <div className=" lh-1">
+                                          <div>
                                             {Math.round(item.price * conversionRate)}<small>.00</small></div>
                                          
                                         </div> </div>

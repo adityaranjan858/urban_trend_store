@@ -162,6 +162,19 @@ border-bottom: 1px solid #e7e7e7;
     border-color: #ecf0f1;
   }
 
+  @media screen and (max-width: 767.98px) {
+    .cartItemActions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+    .cartItemPrice {
+      margin-bottom: unset;
+    }
+  }
+
 
   /* Shimmer card effects  */
   @keyframes shimmer {
