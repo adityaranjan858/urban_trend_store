@@ -86,7 +86,7 @@ const Products = () => {
         <>
           <SearchBar />
           <div className="container ">
-            {/* for desktop */}
+            {/*  ******* for desktop ************/}
             <div className="d-none d-sm-block">
               <Sorting onSortChange={setSortOption} />
             </div>
@@ -94,18 +94,31 @@ const Products = () => {
 
             <div className="row">
               <div className="col-12 col-sm-5 col-md-4 col-lg-3">
-                <div className="d-flex justify-content-between">
+                {/* ******* for desktop ************ */}
+                <div className="d-none d-sm-block">
+                  <Filter
+                    checkBoxValue={checkBoxValue}
+                    setCheckBoxValue={setCheckBoxValue}
+                  />
+                </div>
+                {/* ***************** */}
+
+
+                {/* ******* for mobile ************ */}
+                <div className=" d-flex justify-content-between d-block d-sm-none">
                   <div>
                     <Filter
                       checkBoxValue={checkBoxValue}
                       setCheckBoxValue={setCheckBoxValue}
                     />
                   </div>
-                  <div className="d-block d-sm-none">
+                  <div className="">
                     <Sorting onSortChange={setSortOption} />
                   </div>
                 </div>
-                  <hr className="d-block d-sm-none"/>
+                <hr className="d-block d-sm-none" />
+                {/* ***************** */}
+                
               </div>
               <div className="col-12 col-sm-7 col-md-8 col-lg-9">
                 <ProductsCard
