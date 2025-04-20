@@ -4,7 +4,8 @@ const initialState = {
     message: {
         content: "",
         type: ""
-    }
+    },
+    visible : false
 }
 
 const generalSlice = createSlice({
@@ -14,10 +15,13 @@ const generalSlice = createSlice({
         alertMessage : (state, action)=>{
             state.message.content = action.payload.content
             state.message.type = action.payload.type
+        },
+        setVisible : (state, action)=>{
+            state.visible = action.payload
         }
     }
 });
 
-export const { alertMessage } = generalSlice.actions
+export const { alertMessage, setVisible } = generalSlice.actions
 
 export default generalSlice.reducer

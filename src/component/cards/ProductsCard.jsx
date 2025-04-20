@@ -10,7 +10,7 @@ function ProductsCard({ productsList, buttonName, handleCard }) {
   return (
     <div className="container">
       <h5 className="mt-3">Products</h5>
-      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <div className="row row-cols-2 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
         {productsList.length > 0 ?
           productsList.map((item) => (
             <div className="col" key={item.id}>
